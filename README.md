@@ -1,13 +1,15 @@
 ## Introduction
 
-This is a proof of concept powershell script to parse HTML contained within CSV file.
+This is a proof of concept powershell script to parse HTML contained within a sample CSV file.
+
+original gist: https://gist.github.com/so0k/06425d791c9afcc40ead
 
 ## Quickstart
 
 To run from powershell command line:
 
 ```powershell
-iwr https://goo.gl/N3VnMj | iex
+iwr https://raw.githubusercontent.com/so0k/ParseCsvLetour/master/Parse.ps1 | iex
 ```
 
 ## Demo
