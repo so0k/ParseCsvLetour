@@ -1,4 +1,4 @@
-﻿#Script to parse csv file
+#Script to parse csv file
 
 $OutputFile = ".\Output.csv"
 
