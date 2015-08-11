@@ -14,10 +14,10 @@ Original gist: https://gist.github.com/so0k/06425d791c9afcc40ead
 To run from powershell command line:
 
 ```powershell
-iwr https://raw.githubusercontent.com/so0k/ParseCsvLetour/master/Parse.ps1 | iex
+irm https://raw.githubusercontent.com/so0k/ParseCsvLetour/master/Parse.ps1 | iex
 ```
 
-* iwr is an alias for `Invoke-WebRequest`
+* irm is an alias for `Invoke-RestMethod`
 * iex is an alias for `Invoke-Expression`
 
 **Note**: Never pipe random scripts from the internet to your machine without knowing what they do.. you can review the script before running the line by going to the url: https://raw.githubusercontent.com/so0k/ParseCsvLetour/master/Parse.ps1 in your browser first.
