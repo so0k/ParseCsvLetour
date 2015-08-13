@@ -43,12 +43,12 @@ add-type -Path "HtmlAgilityPack.1.4.9\lib\Net40\HtmlAgilityPack.dll"
 $doc = New-Object HtmlAgilityPack.HtmlDocument 
 
 echo "Parsing $InputFile"
-ConvertFrom-Csv (gc $InputFile)| % {
+ConvertFrom-Csv (gc -Encoding UTF8 $InputFile)| % {
     
     $doc.LoadHTML($_.Description) > $null
     [PSCustomObject]@{ 
         "SKU" = $_."SKU*";
         "Description" = $doc.DocumentNode.SelectNodes("//div[@class='desc']").OuterHtml -Join " "
     }
-} | Export-Csv $OutputFile -NoTypeInformation
+} | Export-Csv $OutputFile -NoTypeInformation -Encoding UTF8
 echo "Done"
